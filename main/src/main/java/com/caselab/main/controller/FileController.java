@@ -26,7 +26,7 @@ public class FileController {
     private final FileService fileService;
 
     @GetMapping("/{id}")
-    public FileResponse getFile(@PathVariable Long id) {
+    public FileResponse getFile(@Positive @PathVariable Long id) {
         return fileService.getFileById(id);
     }
 
